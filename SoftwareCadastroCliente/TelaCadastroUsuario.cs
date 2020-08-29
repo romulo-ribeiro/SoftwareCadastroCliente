@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negócios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace SoftwareCadastroCliente
         public TelaCadastroUsuario()
         {
             InitializeComponent();
+        }
+
+        private void btn_Cadastrar_Click(object sender, EventArgs e)
+        { 
+            UsuarioDados dados = new UsuarioDados();
+            UsuarioModel cadastro = new UsuarioModel()
+            {
+                Usuario = txt_Usuario.Text,
+                Senha = txt_Senha.Text,
+            };
+            dados.Create(cadastro);
+            Programa.cadastrado = true;
         }
     }
 }

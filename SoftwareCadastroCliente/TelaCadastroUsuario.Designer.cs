@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Txt_Senha = new System.Windows.Forms.TextBox();
-            this.Txt_Usuario = new System.Windows.Forms.TextBox();
+            this.txt_Senha = new System.Windows.Forms.TextBox();
+            this.txt_Usuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Btn_Login = new System.Windows.Forms.Button();
+            this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Txt_Senha
+            // txt_Senha
             // 
-            this.Txt_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Senha.Location = new System.Drawing.Point(23, 174);
-            this.Txt_Senha.Name = "Txt_Senha";
-            this.Txt_Senha.Size = new System.Drawing.Size(356, 34);
-            this.Txt_Senha.TabIndex = 13;
-            this.Txt_Senha.UseSystemPasswordChar = true;
+            this.txt_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Senha.Location = new System.Drawing.Point(23, 174);
+            this.txt_Senha.Name = "txt_Senha";
+            this.txt_Senha.Size = new System.Drawing.Size(356, 34);
+            this.txt_Senha.TabIndex = 13;
+            this.txt_Senha.UseSystemPasswordChar = true;
             // 
-            // Txt_Usuario
+            // txt_Usuario
             // 
-            this.Txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Usuario.Location = new System.Drawing.Point(23, 70);
-            this.Txt_Usuario.Name = "Txt_Usuario";
-            this.Txt_Usuario.Size = new System.Drawing.Size(356, 34);
-            this.Txt_Usuario.TabIndex = 12;
+            this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Usuario.Location = new System.Drawing.Point(23, 70);
+            this.txt_Usuario.Name = "txt_Usuario";
+            this.txt_Usuario.Size = new System.Drawing.Size(356, 34);
+            this.txt_Usuario.TabIndex = 12;
             // 
             // label2
             // 
@@ -72,29 +72,30 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Inserir Novo Usuário";
             // 
-            // Btn_Login
+            // btn_Cadastrar
             // 
-            this.Btn_Login.BackColor = System.Drawing.Color.OliveDrab;
-            this.Btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Btn_Login.Location = new System.Drawing.Point(23, 241);
-            this.Btn_Login.Name = "Btn_Login";
-            this.Btn_Login.Size = new System.Drawing.Size(356, 39);
-            this.Btn_Login.TabIndex = 8;
-            this.Btn_Login.Text = "Cadastrar";
-            this.Btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Cadastrar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Cadastrar.Location = new System.Drawing.Point(23, 241);
+            this.btn_Cadastrar.Name = "btn_Cadastrar";
+            this.btn_Cadastrar.Size = new System.Drawing.Size(356, 39);
+            this.btn_Cadastrar.TabIndex = 8;
+            this.btn_Cadastrar.Text = "Cadastrar";
+            this.btn_Cadastrar.UseVisualStyleBackColor = false;
+            this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
             // 
-            // Form1
+            // TelaCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 319);
-            this.Controls.Add(this.Txt_Senha);
-            this.Controls.Add(this.Txt_Usuario);
+            this.Controls.Add(this.txt_Senha);
+            this.Controls.Add(this.txt_Usuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Btn_Login);
-            this.Name = "Form1";
+            this.Controls.Add(this.btn_Cadastrar);
+            this.Name = "TelaCadastroUsuario";
             this.Text = "Novo Usuário";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,10 +103,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox Txt_Senha;
-        private System.Windows.Forms.TextBox Txt_Usuario;
+        private System.Windows.Forms.TextBox txt_Senha;
+        private System.Windows.Forms.TextBox txt_Usuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Btn_Login;
+        private System.Windows.Forms.Button btn_Cadastrar;
     }
 }

@@ -4,8 +4,10 @@ using System.Windows.Forms;
 
 namespace SoftwareCadastroCliente
 {
+    
     public partial class TelaLogin : Form
     {
+        public bool cadastrado = false;
         public TelaLogin()
         {
             InitializeComponent();
@@ -13,8 +15,8 @@ namespace SoftwareCadastroCliente
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-           UsuarioDados banco = new UsuarioDados();
-           UsuarioModel login = new UsuarioModel()
+            UsuarioDados banco = new UsuarioDados();
+            UsuarioModel login = new UsuarioModel()
             {
                 Usuario = txt_Usuario.Text,
                 Senha = txt_Senha.Text
@@ -23,13 +25,14 @@ namespace SoftwareCadastroCliente
             if (banco.Read(login).Count > 0)
             {
                 TelaIntermediaria tela = new TelaIntermediaria();
-                tela.Show();
-                this.Close();
+                this.Hide();
+                tela.ShowDialog();
+
             }
             else
             {
                 TelaAviso aviso = new TelaAviso();
-                aviso.lbl_Aviso.Text = "Usuário não existe!"; 
+                aviso.lbl_Aviso.Text = "Usuário não existe!";
                 aviso.Show();
             }
         }
@@ -37,7 +40,12 @@ namespace SoftwareCadastroCliente
         private void lnk_Cadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             TelaCadastroUsuario cadastro = new TelaCadastroUsuario();
+            this.Hide();
             cadastro.ShowDialog();
+            if (cadastrado)
+            {
+                this.Show();
+            }
         }
     }
 }
