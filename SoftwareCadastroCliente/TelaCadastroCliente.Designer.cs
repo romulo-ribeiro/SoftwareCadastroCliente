@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 522);
+            this.ClientSize = new System.Drawing.Size(413, 524);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Rbut_NaoBinario);
             this.Controls.Add(this.Rbut_Masculino);

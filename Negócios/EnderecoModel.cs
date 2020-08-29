@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Negócios
 {
-    public class Endereco
+    public class EnderecoModel
     {
         public string Logradouro { get; set; }
         public string Número { get; set; } 

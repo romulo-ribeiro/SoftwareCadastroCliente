@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Negócios
 {
-    public class Usuario
+    public class UsuarioModel
     {
-        public string usuario { get; set; }
-        public string senha { get; set; }
+        public string Usuario { get; set; }
+        public string Senha { get; set; }
 
     }
 }

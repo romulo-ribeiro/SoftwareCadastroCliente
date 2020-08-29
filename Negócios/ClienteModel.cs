@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Negócios
 {
-    public class Cliente
+    public class ClienteModel
     {
         public string Nome { get; set; }
         public string DataNascimento { get; set; }

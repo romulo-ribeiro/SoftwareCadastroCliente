@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiteDB, Version=5.0.9.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.5.0.9\lib\net45\LiteDB.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tela CadastroEndereco.cs">
+    <Compile Include="TelaAviso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela CadastroEndereco.Designer.cs">
-      <DependentUpon>Tela CadastroEndereco.cs</DependentUpon>
+    <Compile Include="TelaAviso.Designer.cs">
+      <DependentUpon>TelaAviso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadastroEndereco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastroEndereco.Designer.cs">
+      <DependentUpon>TelaCadastroEndereco.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaCadastroCliente.cs">
       <SubType>Form</SubType>
@@ -78,8 +88,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Tela CadastroEndereco.resx">
-      <DependentUpon>Tela CadastroEndereco.cs</DependentUpon>
+    <EmbeddedResource Include="TelaAviso.resx">
+      <DependentUpon>TelaAviso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadastroEndereco.resx">
+      <DependentUpon>TelaCadastroEndereco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCadastroCliente.resx">
       <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
@@ -102,6 +115,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negócios\Negócios.csproj">
+      <Project>{ba1ef7e3-2df0-470a-ab27-a8bf673b2dd7}</Project>
+      <Name>Negócios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

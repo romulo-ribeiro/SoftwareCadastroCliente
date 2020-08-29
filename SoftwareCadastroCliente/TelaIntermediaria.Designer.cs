@@ -37,8 +37,8 @@
             // Btn_VaiParaCliente
             // 
             this.Btn_VaiParaCliente.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_VaiParaCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Btn_VaiParaCliente.Location = new System.Drawing.Point(110, 102);
+            this.Btn_VaiParaCliente.ForeColor = System.Drawing.Color.Black;
+            this.Btn_VaiParaCliente.Location = new System.Drawing.Point(150, 113);
             this.Btn_VaiParaCliente.Name = "Btn_VaiParaCliente";
             this.Btn_VaiParaCliente.Size = new System.Drawing.Size(415, 43);
             this.Btn_VaiParaCliente.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(110, 194);
+            this.button2.Location = new System.Drawing.Point(150, 193);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(415, 43);
             this.button2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(110, 283);
+            this.button3.Location = new System.Drawing.Point(150, 272);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(415, 43);
             this.button3.TabIndex = 2;
