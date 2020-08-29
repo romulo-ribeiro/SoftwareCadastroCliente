@@ -8,36 +8,52 @@ namespace Negócios
 {
     public class UsuarioDados
     {
-        private readonly ILiteDatabase liteDB;
+        private ILiteDatabase liteDB;
 
         public UsuarioDados()
         {
-            liteDB = new LiteDatabase(@"C:\temp\nomeubanquinho.db");
+             //liteDB = new LiteDatabase(@"C:\temp\nomeubanquinho.db");
         }
         public void Create(UsuarioModel usuario)
         {
-            liteDB.GetCollection<UsuarioModel>().Insert(usuario);
+            using (liteDB = new LiteDatabase(@"C:\temp\nomeubanquinho.db"))
+            {
+                liteDB.GetCollection<UsuarioModel>().Insert(usuario);
+            }
         }
         public void Delete(UsuarioModel usuario)
         {
-            liteDB.GetCollection<UsuarioModel>().DeleteMany(q => q.Usuario == usuario.Usuario && q.Senha == usuario.Senha);
+            using (liteDB = new LiteDatabase(@"C:\temp\nomeubanquinho.db"))
+            {
+                liteDB.GetCollection<UsuarioModel>().DeleteMany(q => q.Usuario == usuario.Usuario && q.Senha == usuario.Senha);
+            }
         }
 
         public void Update(UsuarioModel antigo, UsuarioModel novo)
         {
-            Read(antigo)[0].Usuario = novo.Usuario;
-            Read(antigo)[0].Senha = novo.Senha;
+            using (liteDB = new LiteDatabase(@"C:\temp\nomeubanquinho.db"))
+            {
+                Read(antigo)[0].Usuario = novo.Usuario;
+                Read(antigo)[0].Senha = novo.Senha;
+            }
         }
 
         public List<UsuarioModel> Read()
         {
-            return liteDB.GetCollection<UsuarioModel>().FindAll().ToList();
+            using (liteDB = new LiteDatabase(@"C:\temp\nomeubanquinho.db"))
+            {
+                return liteDB.GetCollection<UsuarioModel>().FindAll().ToList();
+            };
         }
 
         public List<UsuarioModel> Read(UsuarioModel usuario)
         {
-            //return liteDB.GetCollection<UsuarioModel>().Find(q => q.Equals(cliente)).ToList();
-            return liteDB.GetCollection<UsuarioModel>().Find(q => q.Usuario == usuario.Usuario && q.Senha == usuario.Senha).ToList();
+            using (liteDB = new LiteDatabase(@"C:\temp\nomeubanquinho.db"))
+            {
+                //return liteDB.GetCollection<UsuarioModel>().Find(q => q.Equals(cliente)).ToList();
+                return liteDB.GetCollection<UsuarioModel>().Find(q => q.Usuario == usuario.Usuario && q.Senha == usuario.Senha).ToList();
+            };
         }
+
     }
 }

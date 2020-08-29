@@ -27,7 +27,7 @@ namespace SoftwareCadastroCliente
                 Senha = txt_Senha.Text,
             };
             dados.Create(cadastro);
-            Programa.cadastrado = true;
+            this.Close();
         }
     }
 }

@@ -11,10 +11,9 @@ namespace SoftwareCadastroCliente
         [STAThread]
         static void Main()
         {
-            TelaLogin Programa = new TelaLogin();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(Programa);
+            Application.Run(new TelaLogin());
         }
     }
 }
